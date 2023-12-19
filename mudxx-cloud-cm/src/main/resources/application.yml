@@ -1,0 +1,13 @@
+server:
+  port: 9501
+spring:
+  application:
+    name: mudxx-cloud-cm-biz
+  profiles:
+    include:
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        use-model-v3: false

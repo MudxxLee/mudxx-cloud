@@ -16,18 +16,22 @@ import java.util.Map;
 public class ApiBuilder {
 
     private static final AkamaiCredential credential = new AkamaiCredential.Builder()
+//            .host("akab-kcumtwsgjm2fy4ov-gyjmbpym7eodljzg.luna.akamaiapis.net")
+//            .accessToken("akab-h3isdjihh5fm4vi3-usft66teik5iybvd")
+//            .clientToken("akab-coafg5u2masrgu5x-zvjt3w4ukgfgwqd2")
+//            .clientSecret("GgnUiDrdCtmPCYXZaUSHikavk1oSxciAGAQr6wbQeV0=")
+//            .maxBodySize(AkamaiCredential.DEFAULT_MAX_BODY_SIZE_IN_BYTES)
+
             .host("akab-kcumtwsgjm2fy4ov-gyjmbpym7eodljzg.luna.akamaiapis.net")
+            .accessToken("akab-h3isdjihh5fm4vi3-usft66teik5iybvd")
             .clientToken("akab-coafg5u2masrgu5x-zvjt3w4ukgfgwqd2")
             .clientSecret("GgnUiDrdCtmPCYXZaUSHikavk1oSxciAGAQr6wbQeV0=")
-            .accessToken("akab-h3isdjihh5fm4vi3-usft66teik5iybvd")
             .maxBodySize(AkamaiCredential.DEFAULT_MAX_BODY_SIZE_IN_BYTES)
+
             .build();
 
     public static AkamaiCdnApiClient buildCdnApiClient() {
-        return new AkamaiCdnApiClient(
-                "https://akab-kcumtwsgjm2fy4ov-gyjmbpym7eodljzg.luna.akamaiapis.net",
-                credential
-        );
+        return new AkamaiCdnApiClient(credential);
     }
 
     public static void main(String[] args) {

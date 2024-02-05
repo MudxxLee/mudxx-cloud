@@ -20,22 +20,32 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.mudxx.common</groupId>
+            <artifactId>mudxx-common-utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.oracle.oci.sdk</groupId>
+            <artifactId>oci-java-sdk-common-httpclient-jersey</artifactId>
+            <version>${oci.java.sdk.version}</version>
+        </dependency>
         <!--OCI object storage-->
         <dependency>
             <groupId>com.oracle.oci.sdk</groupId>
             <artifactId>oci-java-sdk-objectstorage</artifactId>
             <version>${oci.java.sdk.version}</version>
         </dependency>
+        <!--OCI usage api-->
         <dependency>
             <groupId>com.oracle.oci.sdk</groupId>
-            <artifactId>oci-java-sdk-common-httpclient-jersey</artifactId>
+            <artifactId>oci-java-sdk-usageapi</artifactId>
             <version>${oci.java.sdk.version}</version>
         </dependency>
 

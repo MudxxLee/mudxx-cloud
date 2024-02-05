@@ -28,9 +28,9 @@ public class AkamaiCdnApiClient {
 
     private final Map<String, String> apiHeaders;
 
-    public AkamaiCdnApiClient(String apiHost, AkamaiCredential credential) {
+    public AkamaiCdnApiClient(AkamaiCredential credential) {
         this.apiClient = new AkamaiApiClient(10L, 30L, 30L, credential);
-        this.apiHost = apiHost;
+        this.apiHost = "https://" + credential.getHost();
         this.apiHeaders = new HashMap<>();
         this.apiHeaders.put("accept", "application/json");
     }

@@ -5,17 +5,17 @@ import com.alibaba.fastjson.annotation.JSONField;
 import java.io.Serializable;
 
 /**
- * hostname-hits-by-time
+ * hostname-bytes-by-time
  *
  * @author laiw
  * @date 2023/12/15 17:20
  */
-public class AkamaiCdnReportsDataHhbt implements Serializable {
+public class AkamaiCdnReportsDataHbbt implements Serializable {
     private static final long serialVersionUID = 3842738360753895637L;
     @JSONField(alternateNames = "startdatetime")
     private String startDateTime;
-    private String edgeHitsPerSecond;
-    private String maxEdgeHits;
+    private String edgeBitsPerSecond;
+    private String maxEdgeBytes;
 
     public String getStartDateTime() {
         return startDateTime;
@@ -25,19 +25,19 @@ public class AkamaiCdnReportsDataHhbt implements Serializable {
         this.startDateTime = startDateTime;
     }
 
-    public String getEdgeHitsPerSecond() {
-        return edgeHitsPerSecond;
+    public String getEdgeBitsPerSecond() {
+        return edgeBitsPerSecond;
     }
 
-    public void setEdgeHitsPerSecond(String edgeHitsPerSecond) {
-        this.edgeHitsPerSecond = edgeHitsPerSecond;
+    public void setEdgeBitsPerSecond(String edgeBitsPerSecond) {
+        this.edgeBitsPerSecond = edgeBitsPerSecond;
     }
 
-    public String getMaxEdgeHits() {
-        return maxEdgeHits;
+    public String getMaxEdgeBytes() {
+        return maxEdgeBytes;
     }
 
-    public void setMaxEdgeHits(String maxEdgeHits) {
-        this.maxEdgeHits = maxEdgeHits;
+    public void setMaxEdgeBytes(String maxEdgeBytes) {
+        this.maxEdgeBytes = maxEdgeBytes;
     }
 }

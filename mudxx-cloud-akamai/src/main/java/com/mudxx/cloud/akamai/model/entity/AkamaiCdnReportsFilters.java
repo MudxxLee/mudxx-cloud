@@ -1,5 +1,7 @@
 package com.mudxx.cloud.akamai.model.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -12,20 +14,35 @@ import java.util.List;
 public class AkamaiCdnReportsFilters implements Serializable {
     private static final long serialVersionUID = -7550492654742466417L;
     private List<String> ca;
+    @JSONField(name = "delivery_type")
     private List<String> deliveryType;
+    @JSONField(name = "hostname_contain")
     private List<String> hostnameContain;
+    @JSONField(name = "hostname_end_with")
     private List<String> hostnameEndWith;
+    @JSONField(name = "hostname_exact_match")
     private List<String> hostnameExactMatch;
+    @JSONField(name = "hostname_match")
     private List<String> hostnameMatch;
+    @JSONField(name = "hostname_not_contain")
     private List<String> hostnameNotContain;
+    @JSONField(name = "hostname_not_end_with")
     private List<String> hostnameNotEndWith;
+    @JSONField(name = "hostname_not_match")
     private List<String> hostnameNotMatch;
+    @JSONField(name = "hostname_not_start_with")
     private List<String> hostnameNotStartWith;
+    @JSONField(name = "hostname_start_with")
     private List<String> hostnameStartWith;
+    @JSONField(name = "http_version")
     private List<String> httpVersion;
+    @JSONField(name = "ip_version")
     private List<String> ipVersion;
+    @JSONField(name = "response_class")
     private List<String> responseClass;
+    @JSONField(name = "response_code")
     private List<String> responseCode;
+    @JSONField(name = "response_status")
     private List<String> responseStatus;
     private List<String> traffic;
 

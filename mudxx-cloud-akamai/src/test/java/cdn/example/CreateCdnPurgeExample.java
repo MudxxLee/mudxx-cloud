@@ -63,4 +63,26 @@ public class CreateCdnPurgeExample {
         System.out.println(JsonStrUtil.toJsonStrMelody(response));
     }
 
+
+    @Test
+    public void test3() {
+
+        AkamaiCdnApiClient apiClient = ApiBuilder.buildCdnApiClient();
+
+        List<Integer> values = new ArrayList<>();
+        values.add(1570849);
+
+        AkamaiCdnPurgeCreateRequest<Integer> request = new AkamaiCdnPurgeCreateRequest.Builder<Integer>()
+                .typeEnum(AkamaiCdnPurgeTypeEnum.INVALID_CPCODE)
+                .values(values)
+                .build();
+
+        AkamaiCdnPurgeCreateResponse response = null;
+        try {
+            response = apiClient.createCdnPurge(request, AkamaiCdnNetworkEnum.STAGING);
+        } catch (ApiException e) {
+            e.printStackTrace();
+        }
+        System.out.println(JsonStrUtil.toJsonStrMelody(response));
+    }
 }

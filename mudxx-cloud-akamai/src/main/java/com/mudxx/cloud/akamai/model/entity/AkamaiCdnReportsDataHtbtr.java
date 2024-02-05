@@ -3,19 +3,19 @@ package com.mudxx.cloud.akamai.model.entity;
 import com.alibaba.fastjson.annotation.JSONField;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
- * hostname-hits-by-time
+ * hostname-traffic-by-timeandresponseclass
  *
  * @author laiw
  * @date 2023/12/15 17:20
  */
-public class AkamaiCdnReportsDataHhbt implements Serializable {
+public class AkamaiCdnReportsDataHtbtr implements Serializable {
     private static final long serialVersionUID = 3842738360753895637L;
     @JSONField(alternateNames = "startdatetime")
     private String startDateTime;
-    private String edgeHitsPerSecond;
-    private String maxEdgeHits;
+    private List<AkamaiCdnReportsDataHtbtrDataDTO> data;
 
     public String getStartDateTime() {
         return startDateTime;
@@ -25,19 +25,11 @@ public class AkamaiCdnReportsDataHhbt implements Serializable {
         this.startDateTime = startDateTime;
     }
 
-    public String getEdgeHitsPerSecond() {
-        return edgeHitsPerSecond;
+    public List<AkamaiCdnReportsDataHtbtrDataDTO> getData() {
+        return data;
     }
 
-    public void setEdgeHitsPerSecond(String edgeHitsPerSecond) {
-        this.edgeHitsPerSecond = edgeHitsPerSecond;
-    }
-
-    public String getMaxEdgeHits() {
-        return maxEdgeHits;
-    }
-
-    public void setMaxEdgeHits(String maxEdgeHits) {
-        this.maxEdgeHits = maxEdgeHits;
+    public void setData(List<AkamaiCdnReportsDataHtbtrDataDTO> data) {
+        this.data = data;
     }
 }

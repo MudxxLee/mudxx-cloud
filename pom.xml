@@ -14,6 +14,7 @@
         <module>mudxx-cloud-gcore</module>
         <module>mudxx-cloud-oci</module>
         <module>mudxx-cloud-akamai</module>
+        <module>mudxx-cloud-aws</module>
     </modules>
 
     <properties>
